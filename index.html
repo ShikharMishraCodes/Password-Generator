@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Heading -->
+        <h1>Password Generator</h1>
+
+        <!-- Generated Password & Copy Button -->
+        <div class="password-container">
+            <input type="text" id="password" readonly>
+            <button onclick="copyPassword()">Copy</button>
+        </div>
+
+        <!-- Option to include Length, Numbers & Character -->
+        <div class="controls">
+            <label>Length: <span id="lengthValue">8</span>
+                <input type="range" id="length" min="6" max="100" value="8" onchange="updateLength()">
+            </label>
+            <label>
+                <input type="checkbox" id="includeNumbers"> Numbers
+            </label>
+            <label>
+                <input type="checkbox" id="includeChars"> Characters
+            </label>
+        </div>
+
+        <!-- Generate Password Button -->
+        <button onclick="generatePassword()">Generate Password</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
